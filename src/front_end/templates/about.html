@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="http://betterthanguessing.com/xmlrpc.php">
+
+<title>NBA Game Predictions</title>
+
+<meta name="description" content="What are the odds the home team will win? Updated NBA game predictions every day of the basketball season!"/>
+<link rel="canonical" href="http://betterthanguessing.com/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="NBA Game Predictions" />
+<meta property="og:description" content="What are the odds the home team will win? Updated NBA game predictions every day of the basketball season!" />
+<meta property="og:url" content="http://betterthanguessing.com/" />
+<meta property="og:site_name" content="NBA Game Predictions" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="What are the odds the home team will win? Updated NBA game predictions every day of the basketball season!" />
+<meta name="twitter:title" content="NBA Game Predictions" />
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/css/style.css" type='text/css' />
+<link rel="shortcut icon" type="image/jpg" href="/images/basketball.png"/>
+</head>
+
+<body>
+
+<div id="container" class="container">
+        <nav class="navbar navbar-expand-md navbar-light" style="background-color: #e3f2fd;, font-size: 10 rem;">
+            <a class="navbar-brand py-3" href="/">NBA Game Predictions</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="accuracy.html">Accuracy</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+<div id="content" class="container">
+    <br>
+<h4><strong>Model Methodology Recap</strong></h4>
+<p>When it comes down to the basic methodology, logistic regression is used to check whether the home team is expected to win an upcoming game. The data input is previous performance for both the home and away teams. This type of model outputs a score between 0-1 (ie 0% to 100%) for each match, representing the probability of the event happening (in this case whether the home team will win). If the output for a match is equal to or greater than 50%, that can be interpreted as &#8220;the model thinks the home team will win&#8221;. If it&#8217;s below 50%, the model thinks the away team will win the match. There&#8217;s a fully automated data extraction, cleaning, and formatting (ETL) pipeline running every night behind the scenes feeding into the model to make sure all past games are included and accounted for.</p>
+<p>Every day during the NBA season BetterThanGuessing.com will update to show the predicted outcome for upcoming games.</p>
+
+</div><!-- .page-content -->
+</div><!-- .page-wrapper -->
+
+</body>
+</html>

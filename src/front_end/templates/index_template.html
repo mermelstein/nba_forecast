@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="http://betterthanguessing.com/xmlrpc.php">
+
+<title>NBA Game Predictions</title>
+
+<meta name="description" content="What are the odds the home team will win? Updated NBA game predictions every day of the basketball season!"/>
+<link rel="canonical" href="http://betterthanguessing.com/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="NBA Game Predictions" />
+<meta property="og:description" content="What are the odds the home team will win? Updated NBA game predictions every day of the basketball season!" />
+<meta property="og:url" content="http://betterthanguessing.com/" />
+<meta property="og:site_name" content="NBA Game Predictions" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="What are the odds the home team will win? Updated NBA game predictions every day of the basketball season!" />
+<meta name="twitter:title" content="NBA Game Predictions" />
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/css/style.css" type='text/css' />
+<link rel="shortcut icon" type="image/jpg" href="/images/basketball.png"/>
+</head>
+
+<body>
+
+<div id="container" class="container">
+        <nav class="navbar navbar-expand-md navbar-light" style="background-color: #e3f2fd;, font-size: 10 rem;">
+            <a class="navbar-brand py-3" href="/">NBA Game Predictions</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="accuracy.html">Accuracy</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+<div id="content" class="container">
+	<br>
+<p>BetterThanGuessing.com is dedicated to help you understand the odds of your favorite team winning an upcoming match. To help you judge how good recent NBA predictions have been, here&#8217;s some <span style="text-decoration: underline;"><a href="accuracy.html">accuracy stats</a></span>.</p>
+<p>This table will update every time there are same-day games (if there are no games today the table will show most recent predictions).</p>
+<p style="text-align: center;">
+
+    {% if predictions is none %}
+        <div style="text-align: center;">
+        <h3>There are no predictions for upcoming games, stay tuned!</h3>
+        <img src="/images/sad_basketball.png" alt="Sad Basketball">
+        </div>
+    {% else %}
+        <div class="col-lg-12 col-sm table-responsive-sm">
+            <table class="table table-sm table-striped table-hover">
+                <thead style="background-color: #e3f2fd;">
+                <tr>
+                    <th>Game Date</th>
+                    <th>Home Team</th>
+                    <th>Away Team</th>
+                    <th>Home Win Probability</th>
+                </tr>
+                </thead>
+                {% for item in predictions %}
+                <tr>
+                    <td>{{ item.game_date }}</td>
+                    <td>{{ item.home }}</td>
+                    <td>{{ item.away }}</td>
+                    <td>{{ item.win_pred }}</td>
+
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    {% endif %}
+
+</p>
+<h4 id="methodology" style="text-align: left;"><strong>How to read the table:</strong></h4>
+<p style="padding-left: 30px;">Each row is an upcoming match. The "Home Win Probability" columns shows the odds that the Home Team will win: if it's over 50%, the model thinks the answer is "yes". If it's below 50%, the model thinks the Away Team will win the match. Game Date is given in Eastern time (EST).</p>
+<hr />
+<p>Every day during the sports season you’ll find new up-to-date win predictions.
+<p>Better Than Guessing uses machine learning to predict the result of NBA basketball games. The objective is to be better than random guessing, and provide some insight into how close or lop-sided a match is expected to be. Some <span style="text-decoration: underline;"><a href="accuracy.html">helpful stats</a></span> on the model&#8217;s track record and history are provided to help you judge the accuracy of its historical output.</p>
+
+</div><!-- .page-content -->
+</div><!-- .page-wrapper -->
+</body>
+</html>

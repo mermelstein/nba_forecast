@@ -1,0 +1,16 @@
+/* Responsive sizing for images (general) */
+.sized {
+  max-width: 600px;
+  width: 100%;
+  /* and center the image */
+  display: block;
+  margin: 0 auto;
+}
+
+.navbar-brand {
+  font-size: 2.5rem;
+}
+
+.nav-item {
+  font-size: 1.5rem;
+}

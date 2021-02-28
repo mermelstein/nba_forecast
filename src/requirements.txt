@@ -1,0 +1,11 @@
+
+Jinja2
+python-frontmatter
+beautifulsoup4
+pandas
+numpy
+requests
+sqlalchemy
+psycopg2
+scikit-learn
+pytz

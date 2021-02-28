@@ -1,0 +1,1 @@
+30 5 * * * cd src && bash $HOME/src/docker_build.sh
