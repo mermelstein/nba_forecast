@@ -53,7 +53,7 @@ if new_scores.empty == True:
 else:
 	# write new data to scores table
 	writeDB(new_scores.drop(columns=['joiner', 'run_date']), 'scores')
-
+	print(str(len(new_scores)) + ' new scores written to db')
 	# re-run predictions for any upcoming games with this new input
 	predict_games = queryDB("select * from games where game_date::date >= current_date")
 	if predict_games.empty == True:

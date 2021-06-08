@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 import pandas as pd
 import os
 
-def engine(db_type='postgres',
+def engine(db_type='postgresql',
             user_name=os.environ.get('DB_USER'),
             password=os.environ.get('DB_PASSWORD'),
             host=os.environ.get('DB_HOST'),
