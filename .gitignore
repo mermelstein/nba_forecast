@@ -7,7 +7,6 @@ service_deploy.sh
 ec2_ssh.sh
 private_README.md
 src/front_end/templates/about_old.html
-src/front_end/templates/about.html
 src/front_end/templates/index.html
 src/front_end/templates/accuracy.html
 
